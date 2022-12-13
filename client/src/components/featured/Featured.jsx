@@ -12,22 +12,22 @@ const Featured = ({ type }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try{
-        const res = await axios.get(process.env.REACT_APP_API_URI+"/products?populate=*", {
+      try {
+        const res = await axios.get(process.env.REACT_APP_API_URI + "/products?populate=*", {
           headers: {
-            Authorization: "bearer " + process.env.REACT_APP_API_TOKEN ,
+            Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
           }
         });
 
         setData(res.data.data);
-      }catch(err){
+      } catch (err) {
         console.log(err);
       }
     };
 
     fetchData()
   }, [])
-  
+
   return (
     <div className="featured">
       <div className="top">
