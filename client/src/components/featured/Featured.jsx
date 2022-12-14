@@ -1,7 +1,8 @@
 import React from 'react'
+import useFetch from '../../middleware/useFetch'
 import Card from '../card/Card'
 import './featured.scss'
-import useFetch from '../middleware/useFetch';
+
 
 
 const Featured = ({ type }) => {

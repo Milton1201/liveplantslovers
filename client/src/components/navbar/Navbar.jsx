@@ -7,10 +7,16 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import './navbar.scss'
 import { Link } from 'react-router-dom'
 import Cart from '../cart/Cart'
+import Form from '../form/Form';
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
 
+  const products = useSelector(state => state.cart.products);
+
   const [open, setOpen] = useState(false);
+  const [openForm, setOpenForm] = useState(false);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -49,7 +55,7 @@ const Navbar = () => {
             <Link className='link' to="/">About</Link>
           </div>
           <div className="item">
-            <a className='link' href="mailto:noramuller00@gmail.com" >Email</a>
+            <Link className='link' onClick={() => setOpenForm(!openForm)}>Contact</Link>
           </div>
           <div className="item">
             <a className='link' href="tel: +27 724-018-341">+27 724 018 341</a>
@@ -60,12 +66,13 @@ const Navbar = () => {
             <FavoriteBorderOutlinedIcon />
             <div className="cartIcon" onClick={() => setOpen(!open)} >
               <ShoppingCartOutlinedIcon />
-              <span>0</span>
+              <span>{products.length}</span>
             </div>
           </div>
 
         </div>
       </div>
+      {openForm && <Form />}
       {open && <Cart />}
     </div>
   )

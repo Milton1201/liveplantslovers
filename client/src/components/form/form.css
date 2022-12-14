@@ -1,0 +1,84 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  background-color: #fefefe;
+  z-index: 99;
+  /* width: max-content; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px 5px;
+  gap: 5rem;
+}
+
+.form h2 {
+  color: gray;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.container.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__option {
+  background: rgb(239, 237, 237);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all ease-in #fff
+}
+
+.contact__option:hover {
+  background: transparent;
+  border-color: #fefefe;
+}
+
+.contact__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: green;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid gray;
+  resize: none;
+  color: black;
+}
+
+.btn {
+  width: 50%;
+  height: 50px;
+  color: green;
+  border-radius: 15px;
+}
+
+/* make this responsive using media queries */

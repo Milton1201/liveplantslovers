@@ -1,7 +1,8 @@
 import React from 'react'
 import './list.scss'
 import Card from '../card/Card';
-import useFetch from '../middleware/useFetch';
+import useFetch from '../../middleware/useFetch';
+
 
 const List = ({
   maxPrice, sort, catId, subCats
